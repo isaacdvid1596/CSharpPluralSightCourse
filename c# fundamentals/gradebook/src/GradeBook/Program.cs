@@ -7,25 +7,56 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            var book = new Book("Julio's Grade Book");
-            book.AddGrade(89.1);
-            book.AddGrade(90.5);
+            var book = new DiskBook("Julio's Grade Book");
+            book.GradeAdded += OnGradeAdded;
+            
 
-            List<double> grades = new List<double>() {12.7,10.3,6.11,4.1};
+            EnterGrades(book);
 
-            grades.Add(56.1);
+            var stats = book.GetStatistics();
+            var logger = new StatisticsLogger();
 
-            var result = 0.0;
+            logger.LogStats(stats);
 
-            foreach(var grade in grades)
+        }
+
+        private static void EnterGrades(IBook book)
+        {
+            
+            while (true)
             {
-                result += grade;
+
+                Console.WriteLine("Enter grades: ");
+                var userInput = Console.ReadLine();
+                if (userInput == "q")
+                {
+                    break;
+                }
+
+                try
+                {
+                    var grade = double.Parse(userInput);
+                    book.AddGrade(grade);
+                }
+                catch (ArgumentException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                finally
+                {
+                    System.Console.WriteLine("**");
+                }
+
             }
+        }
 
-            //average
-            var average = result/grades.Count;
-
-            Console.WriteLine($"The result is {result} and the avegare is {average:n1}");
+        static void OnGradeAdded(object sender,EventArgs e)
+        {
+            Console.WriteLine("A grade was added");
         }
     }
 }

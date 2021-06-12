@@ -1,22 +1,75 @@
+using System;
 using System.Collections.Generic;
 
 namespace GradeBook
 {
-    public class Book
+
+    public delegate void GradeAddedDelegate(object sender,EventArgs args);
+
+    public class InMemoryBook : Book
     {
-        public Book(string name)
+        private List<double> grades;
+     
+     
+        public InMemoryBook(string name) : base(name)
         {
             grades = new List<double>();
-            this.name = name;    
+            this.Name = name;    
         }
 
-        private List<double> grades;
-        private string name;
-
-
-        public void AddGrade(double grade)
+        public void AddLetterGrade(char letter)
         {
-            grades.Add(grade);
+            switch(letter)
+            {
+                case 'A':
+                {
+                    AddGrade(90);
+                    break;
+                }
+                case 'B':
+                {
+                    AddGrade(80);
+                    break;
+                }
+                case 'C':
+                {
+                    AddGrade(70);
+                    break;
+                }
+                default:
+                {
+                    Console.WriteLine("Invalid Grade");
+                    break;
+                }
+            }
         }
+
+        public override Statistics GetStatistics()
+        {
+            var result = new Statistics();
+     
+            foreach(var grade in grades)
+            {
+                result.Add(grade);
+            }
+
+            return result;
+        }
+
+        public override void AddGrade(double grade)
+        {
+            if(grade <= 100 && grade >= 0)
+            {
+                grades.Add(grade);
+                if(GradeAdded != null)
+                {
+                    GradeAdded(this,new EventArgs());
+                }
+            }else{
+                throw new ArgumentException($"Invalid {nameof(grade)}");
+            }
+        }
+
+        public override event GradeAddedDelegate GradeAdded;
     }
 }
