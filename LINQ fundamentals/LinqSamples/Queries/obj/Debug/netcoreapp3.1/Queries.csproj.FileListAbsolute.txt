@@ -1,0 +1,13 @@
+C:\Users\isaac\Documents\repos\pluralsight courses\LINQ fundamentals\LinqSamples\Queries\bin\Debug\netcoreapp3.1\Queries.exe
+C:\Users\isaac\Documents\repos\pluralsight courses\LINQ fundamentals\LinqSamples\Queries\bin\Debug\netcoreapp3.1\Queries.deps.json
+C:\Users\isaac\Documents\repos\pluralsight courses\LINQ fundamentals\LinqSamples\Queries\bin\Debug\netcoreapp3.1\Queries.runtimeconfig.json
+C:\Users\isaac\Documents\repos\pluralsight courses\LINQ fundamentals\LinqSamples\Queries\bin\Debug\netcoreapp3.1\Queries.runtimeconfig.dev.json
+C:\Users\isaac\Documents\repos\pluralsight courses\LINQ fundamentals\LinqSamples\Queries\bin\Debug\netcoreapp3.1\Queries.dll
+C:\Users\isaac\Documents\repos\pluralsight courses\LINQ fundamentals\LinqSamples\Queries\bin\Debug\netcoreapp3.1\Queries.pdb
+C:\Users\isaac\Documents\repos\pluralsight courses\LINQ fundamentals\LinqSamples\Queries\obj\Debug\netcoreapp3.1\Queries.csproj.AssemblyReference.cache
+C:\Users\isaac\Documents\repos\pluralsight courses\LINQ fundamentals\LinqSamples\Queries\obj\Debug\netcoreapp3.1\Queries.AssemblyInfoInputs.cache
+C:\Users\isaac\Documents\repos\pluralsight courses\LINQ fundamentals\LinqSamples\Queries\obj\Debug\netcoreapp3.1\Queries.AssemblyInfo.cs
+C:\Users\isaac\Documents\repos\pluralsight courses\LINQ fundamentals\LinqSamples\Queries\obj\Debug\netcoreapp3.1\Queries.csproj.CoreCompileInputs.cache
+C:\Users\isaac\Documents\repos\pluralsight courses\LINQ fundamentals\LinqSamples\Queries\obj\Debug\netcoreapp3.1\Queries.dll
+C:\Users\isaac\Documents\repos\pluralsight courses\LINQ fundamentals\LinqSamples\Queries\obj\Debug\netcoreapp3.1\Queries.pdb
+C:\Users\isaac\Documents\repos\pluralsight courses\LINQ fundamentals\LinqSamples\Queries\obj\Debug\netcoreapp3.1\Queries.genruntimeconfig.cache
